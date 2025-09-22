@@ -34,9 +34,10 @@
     <br>
     <?php
     $randomImg = ["elephant.jpg", "leo.jpg", "zebr.jpg"];
-    $randImg = array_rand($randomImg);
-    $rImg = $randomImg[$randImg];
-    echo "<img src='img/$rImg' height='300px'/>";
+    $randImg = $randomImg[mt_rand(0,2)];
+    // $randImg = array_rand($randomImg);
+    // $rImg = $randomImg[$randImg];
+    echo "<img src='img/$randImg' height='300px'/>";
     ?>
     <hr>
     задача c массивами 4
@@ -46,7 +47,8 @@
     $countMinus = 0; 
     $sum = 0;
     for ($i=0; $i < 1000; $i++) { 
-        array_push($arrTausen, mt_rand(-15, 14));
+        $arrTausen[] = mt_rand(-15, 14);
+        // array_push($arrTausen, mt_rand(-15, 14));
     }
     for ($i=count($arrTausen)-1; $i >=0 ; $i--) {  
         $value = $arrTausen[$i];
