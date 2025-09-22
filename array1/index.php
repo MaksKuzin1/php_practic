@@ -20,7 +20,10 @@
     задача c массивами 2
     <br>
     <?php
-    $randomMatrix = [11, 22, 33, 44, 55, 66, 77, 88];
+    $randomMatrix = [];
+    for ($i=0; $i < 10; $i++) { 
+        $randomMatrix[] = mt_rand(-44, 50);
+    }
     foreach ($randomMatrix as $num) {
         echo $num . ' ';
     }
@@ -46,8 +49,9 @@
     $arrTausen = [];
     $countMinus = 0; 
     $sum = 0;
-    for ($i=0; $i < 1000; $i++) { 
+    for ($i=0; $i < 100; $i++) { 
         $arrTausen[] = mt_rand(-15, 14);
+        echo $arrTausen[$i] . ', ';
         // array_push($arrTausen, mt_rand(-15, 14));
     }
     for ($i=count($arrTausen)-1; $i >=0 ; $i--) {  
@@ -59,7 +63,7 @@
             $sum += $value;
             break;
         }
-        break;
+        // break;
     }
     // foreach (array_reverse($arrTausen) as $value ) {
     //     $countMinus += ($value < 0)? 1 : 0;
