@@ -20,7 +20,7 @@
     <h1>Задача 3</h1>
     <?php
     $str = "Привет мир";
-    echo $str . "<br>" . substr_count(strtolower($str),"и");
+    echo $str . "<br>" . mb_substr_count(strtolower($str),"и");
     ?>
     <h1>Задача 4</h1>
     <?php
